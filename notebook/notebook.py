@@ -23,7 +23,8 @@ class Note():
         self.tags = tags
         self.creation_date = datetime.date.today()
         global memoID
-        self.id = memoID + 1
+        memoID = memoID + 1
+        self.id = memoID
 
     def match(self,search_filters):
         """
@@ -50,7 +51,7 @@ class Notebook():
         vals = [i for i in self.notebook_list if i.match(filter_term)]
         return vals
     
-    def new_note(self,memo,tags):
+    def new_note(self,memo,tags=""):
         """
         add a new note to the notebook
         """
@@ -78,6 +79,5 @@ class Notebook():
     
 
 
-    
 
     
