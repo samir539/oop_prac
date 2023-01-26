@@ -29,4 +29,13 @@ class Menu:
             else:
                 print("{0} is not a valid choice".format(choice))
     
+    def show_notes(self, notes=None):
+        if not notes:
+            notes = self.notebook.notebook_list
+        for note in notes:
+            print("{0}:{1}\n{2}".format(note.id,note.tags,note.memo))
     
+    def search_notes(self):
+        filter = input("search for:")
+        notes = self.notebook.search(filter)
+        self.show_notes(notes)
