@@ -49,6 +49,13 @@ class Menu:
         id = input("enter id of note you wish to modify: ")
         contents = input("enter the new contents you would like in your note:")
         self.notebook.modify_memo(id, contents)
+    
+    def quit(self):
+        print("all done")
+        sys.exit(0)
+
+if __name__ == "__main__":
+    Menu().run()
 
     
 

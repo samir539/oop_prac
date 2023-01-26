@@ -63,7 +63,7 @@ class Notebook():
         find a memo with the inputted id and change the memo contents to contents
         """
         for i in self.notebook_list:
-            if i.id == id:
+            if str(i.id) == str(id):
                 i.memo = contents
                 break
     
@@ -72,12 +72,12 @@ class Notebook():
         find a memo with the inputted id and change the tags of the memo 
         """
         for i in self.notebook_list:
-            if i.id == id:
+            if str(i.id) == str(id):
                 i.tags = new_tags
                 break
 
     
 
 
-                
+
     
