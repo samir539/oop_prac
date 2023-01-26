@@ -1,5 +1,10 @@
 import math
+import numpy
 class Point():
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+
     def move(self,x,y):
         self.x = x
         self.y = y
@@ -15,11 +20,11 @@ class Point():
 
 
 
-p1 = Point()
-p2 = Point()
+p1 = Point(10,10)
+p2 = Point(7,12)
 
-p1.move(5,5)
-p2.move(10,10)
-print(p1.calc_dist(p2))
-p1.reset()
-print(p1.x,p1.y)
+# p1.move(5,5)
+# p2.move(10,10)
+# print(p1.calc_dist(p2))
+# p1.reset()
+# print(p1.x,p1.y)
