@@ -39,3 +39,16 @@ class Menu:
         filter = input("search for:")
         notes = self.notebook.search(filter)
         self.show_notes(notes)
+
+    def add_note(self):
+        contents = input("input the note contents:")
+        self.notebook.new_note(contents)
+        print("note added")
+
+    def modify_note(self):
+        id = input("enter id of note you wish to modify: ")
+        contents = input("enter the new contents you would like in your note:")
+        self.notebook.modify_memo(id, contents)
+
+    
+
