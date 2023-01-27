@@ -4,7 +4,8 @@ class Property():
     """
     A superclass for all properties
     """
-    def __init__(self,square_feet,num_bedrooms,num_bathrooms):
+    def __init__(self,square_feet,num_bedrooms,num_bathrooms, **kwargs):
+        super().__init__(**kwargs)
         self.square_feet = square_feet
         self.num_bedrooms = num_bedrooms
         self.num_bathrooms = num_bathrooms
@@ -21,6 +22,8 @@ class Property():
     def prompt_init():
         return dict(square_feet=input("Enter the square feet: "),beds=input("Enter no of bedrooms: "), baths=input("Enter number of baths"))
     prompt_init = staticmethod(prompt_init)
+
+
     
 
 
